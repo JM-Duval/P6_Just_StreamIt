@@ -1,70 +1,41 @@
 body
 {
-    background: black;
-    font-family: 'Trebuchet MS', Arial, sans-sherif;
+    background: #020111;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     color: #181818;
-}
-
-#bloc_page
-{
-    width: 900px;
+    max-width: 1100px;
+    text-align: center;
     margin: auto;
 }
 
-section h1, footer h1, nav a
+
+header, section
 {
-    font-family: Dayrom, serif;
-    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.10);
+    display: flex;
+    margin-top: 10px;
 }
 
 header
 {
-    background-color: rgba(255, 255, 255, 0.15);
-    display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    
+    align-items: flex-end;    
 }
 
-#titre_principal
+section
 {
-    display: flex;
-    flex-direction: column;
-}
-
-#logo img
-{
-    width: 59px;
-    height: 60px;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 header h1
 {
-    font-family: 'BallparkWeiner', serif;
     font-size: 1.5em;
     color: #CC0A0A;
     font-weight: bold;
     margin: 0 0 0 10px;
     transform: translateY(-50%);
 }
-
-header h2
-{
-    font-family: Dayrom, serif;
-    font-size: 1.1em;
-    margin-top: 0px;
-    font-weight: normal;
-}
-
-
-h3
-{
-    color: white;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-
 
 /* Navigation */
 
@@ -83,7 +54,6 @@ nav a
 {
     font-size: 1em;
     color: white;
-    padding-bottom: 3px;
     text-decoration: none;
 }
 
@@ -94,60 +64,11 @@ nav a:hover
     font-weight: bold;
 }
 
-
-.best_movies {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.15);
-    margin-top: 5px;
-}
-
-.best_movies h2 {
-    color: #E5E5E5;
-    text-align: center;
-}
-
-
-
-
-.bouton_rouge
-{
-    height: 25px;
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
-    background: url('images/fond_degraderouge.png') repeat-x;
-    border: 1px solid #760001;
-    border-radius: 5px;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 3px 8px 0px 8px;
-    color: white;
-    text-decoration: none; 
-}
-
-.bouton_rouge img
-{
-    border: 0;
-}
-
-section
-{
-    display: flex;
-    margin-bottom: 10px;
-    background-color: rgba(255, 255, 255, 0.10);
-    margin-top: 15px;
-}
-
 article, aside
 {
     margin-right: 20px;
-    flex: 3;
 }
 
-article p
-{
-    font-size: 0.8em;
-}
 
 aside
 {
@@ -155,10 +76,51 @@ aside
     position: relative;
     padding: 10px;
     color: white;
-    font-size: 0.9em;
-    text-align: justify;    
+    font-size: 1.5em;
+    text-align: start;
 }
 
+aside h2
+{
+    text-align: justify;
+}
+
+.myBtn a
+{
+    padding: 10px;
+    color: white;
+    background-color: rgba(69, 76, 81, 0.9);
+    border-radius: 5px;
+    position: absolute; 
+    vertical-align: middle;
+}
+
+.myBtn a:hover
+{
+    color: #CC0A0A;
+    background-color: rgba(69, 76, 81, 0.2);
+    border-radius: 5px;
+    position: absolute; 
+    vertical-align: middle;
+}
+
+
+h3
+{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+
+/* Carousel */
+
+.best_movies {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-top: 5px;
+}
 
 .item__title, .item__descritpion
 {
@@ -169,6 +131,7 @@ aside
 .item {
     position: relative;
     overflow: hidden;
+    min-width: 100%;
 }
 
 .carousel
@@ -237,12 +200,15 @@ aside
     overflow: auto;
     background-origin: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
+    text-align: start;
 }
 
 /* modal content/box */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
+    /*background-color: #fefefe;*/
+    color: white;
+    background-color: rgba(69, 76, 81, 0.9);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
