@@ -1,0 +1,269 @@
+body
+{
+    background: black;
+    font-family: 'Trebuchet MS', Arial, sans-sherif;
+    color: #181818;
+}
+
+#bloc_page
+{
+    width: 900px;
+    margin: auto;
+}
+
+section h1, footer h1, nav a
+{
+    font-family: Dayrom, serif;
+    text-transform: uppercase;
+}
+
+header
+{
+    background-color: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo img
+{
+    width: 59px;
+    height: 60px;
+}
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 1.5em;
+    color: #CC0A0A;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+    transform: translateY(-50%);
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+
+h3
+{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+
+/* Navigation */
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1em;
+    color: white;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #CC0A0A;;
+    border-bottom: 1.5px solid #CC0A0A;;
+    font-weight: bold;
+}
+
+
+.best_movies {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin-top: 5px;
+}
+
+.best_movies h2 {
+    color: #E5E5E5;
+    text-align: center;
+}
+
+
+
+
+.bouton_rouge
+{
+    height: 25px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none; 
+}
+
+.bouton_rouge img
+{
+    border: 0;
+}
+
+section
+{
+    display: flex;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.10);
+    margin-top: 15px;
+}
+
+article, aside
+{
+    margin-right: 20px;
+    flex: 3;
+}
+
+article p
+{
+    font-size: 0.8em;
+}
+
+aside
+{
+    flex:4;
+    position: relative;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+    text-align: justify;    
+}
+
+
+.item__title, .item__descritpion
+{
+    background-color: white;
+    color: black;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel
+{
+    position: relative;
+    overflow: hidden;    
+}
+
+.carousel__container {
+    transition: transform 0.3s;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel__container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.carousel__item {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.carousel__item:hover {
+    transform: translate(0px, -10px);
+}
+
+.carousel__next, .carousel__prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFF url("images/fleche_droite_noir.png") center center no-repeat;
+    background-size: 20px, 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.carousel__next:hover, .carousel__prev:hover {
+    transform: scale(1.3)
+}
+
+
+.carousel__prev {
+    background-image: url("images/fleche_gauche_noir.png");
+    transform-origin: rotate(180deg);
+    right: auto;
+    left: 10px;
+}
+
+
+
+/* The modal (background) */
+.modal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-origin: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* modal content/box */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 1.5em;
+}
+
+/* The close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 55px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover, 
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
