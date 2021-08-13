@@ -84,7 +84,7 @@ class Carousel {
 	 */
 
 	createDivWithClass (className) {
-		console.log('div created with class');
+		//console.log('div created with class');
 		let div = document.createElement('div');
 		div.setAttribute('class', className);
 		return div;
@@ -118,7 +118,6 @@ var span = document.getElementsByClassName("close")[0];
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(event) {
         let idEvent = event.target.id;
-        console.log(event.target);
         modal.style.display = "block";
 
         const texteModal = document.getElementById('description_modal');
@@ -137,9 +136,11 @@ for (var i = 0; i < btns.length; i++) {
         	html += 'Description : ' + array['description'] + '<br>';
         	texteModal.innerHTML = html;
 		});
-    });
-}
 
+		const imageModal = document.getElementById('image_modal');
+		image_modal.src = event.target.src;
+	});
+}
 
 
 //when the user clicks on cross, close the modal
@@ -271,6 +272,8 @@ const linksInfosBestMovie = async function (url) {
 			description_best_movie.innerHTML = dataMovie.description;
 			var elementBM = document.getElementById('best_movie');
 			elementBM.id = dataMovie.id;
+			elementBM.src = dataMovie.image_url;
+
 		} else {
 		console.error('Retour du serveur: ', response.status)
 		}
